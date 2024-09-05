@@ -8,17 +8,30 @@ $(function () {
         }
     });
 
-    // Função para aumentar o contador
-    $('#increaseButton').click(function () {
-        let currentValue = parseInt($('#counter').val());
-        $('#counter').val(currentValue + 1);
-    });
+// Função para aumentar o contador
+$('#increaseButton').click(function () {
+    let currentValue = parseInt($('#counter').val());
 
-    // Função para diminuir o contador
-    $('#decreaseButton').click(function () {
-        let currentValue = parseInt($('#counter').val());
-        if (currentValue > 0) {
-            $('#counter').val(currentValue - 1);
-        }
-    });
+    // Verifica se currentValue é um número válido
+    if (isNaN(currentValue)) {
+        currentValue = 0; // Define um valor padrão se for NaN
+    }
+    
+    $('#counter').val(currentValue + 1);
+});
+
+// Função para diminuir o contador
+$('#decreaseButton').click(function () {
+    let currentValue = parseInt($('#counter').val());
+
+    // Verifica se currentValue é um número válido
+    if (isNaN(currentValue)) {
+        currentValue = 0; // Define um valor padrão se for NaN
+    }
+
+    if (currentValue > 0) {
+        $('#counter').val(currentValue - 1);
+    }
+});
+
 });

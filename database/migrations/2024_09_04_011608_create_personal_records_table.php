@@ -13,7 +13,7 @@ class CreatePersonalRecordsTable extends Migration
      */
     public function up()
     {
-        Schema::create('personal_record', function (Blueprint $table) {
+        Schema::create('personal_records', function (Blueprint $table) {
             $table->id(); 
             $table->unsignedBigInteger('user_id'); 
             $table->unsignedBigInteger('movement_id');
@@ -34,6 +34,6 @@ class CreatePersonalRecordsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('personal_record');
+        Schema::dropIfExists('personal_records');
     }
 }

@@ -13,7 +13,7 @@ class CreateMovementsTable extends Migration
      */
     public function up()
     {
-        Schema::create('movement', function (Blueprint $table) {
+        Schema::create('movements', function (Blueprint $table) {
             $table->id(); // Cria a coluna "id" auto-incrementada
             $table->string('name', 255); // Cria a coluna "name" do tipo varchar(255)
             $table->timestamps(); // Cria as colunas "created_at" e "updated_at"
@@ -27,6 +27,6 @@ class CreateMovementsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('movement');
+        Schema::dropIfExists('movements');
     }
 }

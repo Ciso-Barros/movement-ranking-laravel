@@ -33,7 +33,7 @@
                 <div id="counterContainer" class="d-none">
                     <div class="input-group">
                         <button class="btn btn-outline-primary" type="button" id="decreaseButton">-</button>
-                        <input type="text" class="form-control text-center" name="score" id="counter" value="" readonly>
+                        <input type="text" class="form-control text-center" name="score" id="counter" value="0" readonly>
                         <button class="btn btn-outline-primary" type="button" id="increaseButton">+</button>
                     </div>
                 </div>

@@ -38,39 +38,43 @@
                 @php
         $movementName = null;
     @endphp
+                @if($records)
                 @foreach($records as $dados)
-        @if ($dados->movement_name !== $movementName)
-                        <tr class='active'> 
-                            <td colspan="5" style="border-top: 2px solid black; font-weight: bold;">
-                                Movimento: {{ $dados->movement_name }}
-                            </td>
-                        </tr>
-                        @php
+                        @if ($dados->movement_name !== $movementName)
+                            <tr class='active'> 
+                                <td colspan="5" style="border-top: 2px solid black; font-weight: bold;">
+                                    Movimento: {{ $dados->movement_name }}
+                                </td>
+                            </tr>
+                            @php
                 $movementName = $dados->movement_name;
             @endphp
-                    @endif
+                        @endif
 
 
+                        <tr>
+                            <td>{{ $dados->rank }}°</td>
+                            <td>{{ $dados->user_name ? $dados->user_name : 'Desconhecido' }} </td>
+                            <td>{{ $dados->movement_name ? $dados->movement_name : 'Desconhecido' }}</td>
+                            <td>{{ $dados->score }}</td>
+                            <td>{{ date('d/m/Y H:i:s', strtotime($dados->date)) }}</td>
+                            <td>
+                                <form  action="{{ url('destroy', $dados->id) }}" method="POST" style="display:inline;" onsubmit="return confirm('Tem certeza que deseja excluir?');">
+                                    @csrf
+                                    {{--@method('DELETE')--}}
+                                    <button type="submit" class="btn btn-danger">
+                                        <i class="bi bi-person-x-fill"></i>
+                                    </button>
+                                </form>
+                            </td>
+                        </tr>
+                    @endforeach
+                @else
                     <tr>
-                        <td>{{ $dados->rank }}°</td>
-                        <td>{{ $dados->user_name ? $dados->user_name : 'Desconhecido' }} </td>
-                        <td>{{ $dados->movement_name ? $dados->movement_name : 'Desconhecido' }}</td>
-                        <td>{{ $dados->score }}</td>
-                        <td>{{ date('d/m/Y H:i:s', strtotime($dados->date)) }}</td>
-                        <td>
-                            <form  action="{{ url('destroy', $dados->id) }}" method="POST" style="display:inline;" onsubmit="return confirm('Tem certeza que deseja excluir?');">
-                                @csrf
-                                {{--@method('DELETE')--}}
-                                <button type="submit" class="btn btn-danger">
-                                    <i class="bi bi-person-x-fill"></i>
-                                </button>
-                            </form>
-                        </td>
+                        <td colspan="6">Nada encontrado...</td>
                     </tr>
-                @endforeach
+                @endif
             </tbody>
-
-
         </table>
     </div>
 @endsection
