@@ -21,20 +21,4 @@ $(function () {
             $('#counter').val(currentValue - 1);
         }
     });
-    $('.ver-dados').click(function () {
-        var id = $(this).attr('id');
-//         Envia uma solicitação AJAX para carregar a view
-        $.ajax({
-            url: '/tarefa/' + id,
-            type: 'GET',
-            success: function (response) {
-                // Atualiza o conteúdo da modal com a resposta
-                $('.modal-body').html(response);
-            },
-            error: function (xhr) {
-                // Trata erros
-                $('.modal-body').html('<p>Ocorreu um erro ao carregar os dados.</p>');
-            }
-        });
-    });
 });

@@ -1,9 +1,16 @@
 @extends('templates.header')
 @section('content')
 {{--@dd($tarefa);--}}
-    <h1 class="text-center">@if(isset($tarefa)) Editar @else Cadastrar @endif</h1> <hr>
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+  <h4 class="alert-heading"> Segurança Ativada!</h4>
+  <p>Esta API Implementa e valida as entradas via <b>back-end</b></p>
+  <hr>
+  <p class="mb-0"> <b>>></b> Experimente retirar o atributo html "Required"</p>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+    <h1 class="text-center">Cadastrar</h1> 
+    <hr>
     <div class="col-8 m-auto">
-
         @if(isset($errors) && count($errors) > 0)
             <div class="alert alert-danger alert-dismissible fade show mt-4 mb-4" role="alert">
                 <strong>Erro!</strong> 
@@ -15,29 +22,23 @@
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
         @endif
-        @if(isset($tarefa))
-            <form name="formEdit" id="formEdit" method="post" action="{{ url('tarefa/{$tarefa->id}') }}">
-                @method('PUT')
-        @else
-            <form name="formCad" id="formCad" method="post" action="{{ url('/tarefa') }}">
-        @endif
+            <form name="formCad" id="formCad" method="post" action="{{ url('/cadastrar') }}">
                 @csrf
-                <input class="form-control" type="text" name="tarefa_titulo" id="titulo" placeholder="Título:" value="{{ $tarefa->tarefa_titulo ?? '' }}" required><br>
-                <textarea class="form-control" rows="4" name="tarefa_descricao" id="descricao" placeholder="Descrição:" required>{{ $tarefa->tarefa_descricao ?? '' }}</textarea><br>
-                <input class="form-control" type="text" name="tarefa_local" id="local" placeholder="Local:" value="{{ $tarefa->tarefa_local ?? '' }}" required><br>
+                <input class="form-control" type="text" name="user_name" id="titulo" placeholder="Nome:" value="" required><br>
+                <textarea class="form-control" rows="4" name="movement_name" id="descricao" placeholder="Movimento:" required></textarea><br>
                 <div class="form-check form-switch">
-                    <label class="form-check-label" for="toggleCounter">Adicionar Participantes</label>
-                    <input class="form-check-input" type="checkbox" id="toggleCounter" {{ isset($tarefa->tarefa_num_participantes) ? 'checked' : '' }}>
+                    <label class="form-check-label" for="toggleCounter">Adicionar Pontuação?</label>
+                    <input class="form-check-input" type="checkbox" id="toggleCounter">
                 </div>
-                <div id="counterContainer" class="{{ !isset($tarefa->tarefa_num_participantes) ? 'd-none' : '' }}">
+                <div id="counterContainer" class="d-none">
                     <div class="input-group">
                         <button class="btn btn-outline-primary" type="button" id="decreaseButton">-</button>
-                        <input type="text" class="form-control text-center" name="tarefa_num_participantes" id="counter" value="{{ $tarefa->tarefa_num_participantes ?? '0' }}" readonly>
+                        <input type="text" class="form-control text-center" name="score" id="counter" value="" readonly>
                         <button class="btn btn-outline-primary" type="button" id="increaseButton">+</button>
                     </div>
                 </div>
                 <br>
-                <input class="btn btn-primary" type="submit" value="@if(isset($tarefa)) Editar @else Cadastrar @endif">
+                <input class="btn btn-primary" type="submit" value="Cadastrar">
             </form>
         </div>
     @endsection

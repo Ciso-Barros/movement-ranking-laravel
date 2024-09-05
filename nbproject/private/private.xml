@@ -3,16 +3,24 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/mano_tarso/Documentos/Projetos/Laravel/vacation-plan-app/app/Http/Requests/TarefaRequest.php</file>
-            <file>file:/home/mano_tarso/Documentos/Projetos/Laravel/vacation-plan-app/resources/views/templates/menu.blade.php</file>
-            <file>file:/home/mano_tarso/Documentos/Projetos/Laravel/vacation-plan-app/app/Models/Models/ModelTarefa.php</file>
-            <file>file:/home/mano_tarso/Documentos/Projetos/Laravel/vacation-plan-app/resources/views/index.blade.php</file>
-            <file>file:/home/mano_tarso/Documentos/Projetos/Laravel/vacation-plan-app/routes/web.php</file>
-            <file>file:/home/mano_tarso/Documentos/Projetos/Laravel/vacation-plan-app/resources/views/templates/header.blade.php</file>
-            <file>file:/home/mano_tarso/Documentos/Projetos/Laravel/vacation-plan-app/app/Http/Controllers/Controller.php</file>
-            <file>file:/home/mano_tarso/Documentos/Projetos/Laravel/vacation-plan-app/resources/views/cadastrar.blade.php</file>
-            <file>file:/home/mano_tarso/Documentos/Projetos/Laravel/vacation-plan-app/app/Http/Controllers/TarefaController.php</file>
-            <file>file:/home/mano_tarso/Documentos/Projetos/Laravel/vacation-plan-app/resources/views/dados.blade.php</file>
+            <file>file:/home/mano_tarso/Documentos/Projetos/Laravel/movement-ranking/database/migrations/2024_09_04_011608_create_personal_records_table.php</file>
+            <file>file:/home/mano_tarso/Documentos/Projetos/Laravel/movement-ranking/routes/web.php</file>
+            <file>file:/home/mano_tarso/Documentos/Projetos/Laravel/movement-ranking/public/assets/js/index.js</file>
+            <file>file:/home/mano_tarso/Documentos/Projetos/Laravel/movement-ranking/app/Http/Controllers/UserController.php</file>
+            <file>file:/home/mano_tarso/Documentos/Projetos/Laravel/movement-ranking/resources/views/templates/footer.blade.php</file>
+            <file>file:/home/mano_tarso/Documentos/Projetos/Laravel/movement-ranking/app/Models/ModelPersonalRecord.php</file>
+            <file>file:/home/mano_tarso/Documentos/Projetos/Laravel/movement-ranking/resources/views/templates/header.blade.php</file>
+            <file>file:/home/mano_tarso/Documentos/Projetos/Laravel/movement-ranking/resources/views/templates/menu.blade.php</file>
+            <file>file:/home/mano_tarso/Documentos/Projetos/Laravel/movement-ranking/database/migrations/2014_10_12_000000_create_users_table.php</file>
+            <file>file:/home/mano_tarso/Documentos/Projetos/Laravel/movement-ranking/database/migrations/2024_09_04_011520_create_movements_table.php</file>
+            <file>file:/home/mano_tarso/Documentos/Projetos/Laravel/movement-ranking/app/Http/Requests/PersonalRecordRequest.php</file>
+            <file>file:/home/mano_tarso/Documentos/Projetos/Laravel/movement-ranking/resources/views/index.blade.php</file>
+            <file>file:/home/mano_tarso/Documentos/Projetos/Laravel/movement-ranking/.env</file>
+            <file>file:/home/mano_tarso/Documentos/Projetos/Laravel/movement-ranking/app/Http/Controllers/Controller.php</file>
+            <file>file:/home/mano_tarso/Documentos/Projetos/Laravel/movement-ranking/routes/api.php</file>
+            <file>file:/home/mano_tarso/Documentos/Projetos/Laravel/movement-ranking/app/Models/ModelMovement.php</file>
+            <file>file:/home/mano_tarso/Documentos/Projetos/Laravel/movement-ranking/app/Models/ModelUser.php</file>
+            <file>file:/home/mano_tarso/Documentos/Projetos/Laravel/movement-ranking/resources/views/cadastrar.blade.php</file>
         </group>
     </open-files>
 </project-private>
