@@ -12,6 +12,7 @@ class ModelMovement extends Model
     protected $table = 'movements';
 
     protected $fillable = [
+        'id',
         'name',
     ];
 }
